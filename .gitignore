@@ -1,0 +1,10 @@
+*.pyc
+*.swp
+*.eggs
+.idea/
+.tox/
+build/
+dist/
+ambari_presto.egg-info/
+docs/_build
+.pytest_cache/
