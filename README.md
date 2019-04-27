@@ -9,7 +9,7 @@ Tested on
 # Installation
 For `ambari-2.7.3`, `HDP-3.1`, `ambari-server-presto-0.1.tar.gz`
 ```
-wget ambari-server-presto-0.1.tar.gz
+wget https://github.com/archongum/ambari-server-presto/releases/download/0.1/ambari-server-presto-0.1.tar.gz
 
 sudo mkdir /var/lib/ambari-server/resources/stacks/HDP/3.1/services/PRESTO/
 
