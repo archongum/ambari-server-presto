@@ -17,6 +17,15 @@ class Cli(Script):
     def status(self, env):
         raise ClientComponentHasNoStatus()
 
+    def configure(self, env):
+        pass
+
+    def start(self, env):
+        pass
+
+    def stop(self, env):
+        pass
+
 
 if __name__ == '__main__':
     Cli().execute()
