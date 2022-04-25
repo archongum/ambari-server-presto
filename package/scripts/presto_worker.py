@@ -17,16 +17,10 @@ class Worker(Script):
         exec_command('rm -rf {0}'.format(presto_install_dir))
         # init dirs
         init_dirs()
-        # bin, java_home
-        exec_command(tar_pattern.format(presto_tar_file, presto_install_dir, 'bin', 1))
-        exec_command(
-            'sed -i "2iexport JAVA_HOME={0}" {1}'.format(java_home, presto_launcher_script))
-        exec_command(
-            'sed -i "3iexport PATH=\$JAVA_HOME/bin:\$PATH" {0}'.format(presto_launcher_script))
-        # lib
-        exec_command(tar_pattern.format(presto_tar_file, presto_install_dir, 'lib', 1))
-        # plugin
-        exec_command(tar_pattern.format(presto_tar_file, presto_plugin_dir, 'plugin', 2))
+        # install and set java_home
+        exec_command(tar_pattern.format(presto_tar_file, presto_install_dir, '*', 1))
+        exec_command('sed -i "2iexport JAVA_HOME={0}" {1}'.format(java_home, presto_launcher_script))
+        exec_command('sed -i "3iexport PATH=\$JAVA_HOME/bin:\$PATH" {0}'.format(presto_launcher_script))
         # config
         self.configure(env)
 
