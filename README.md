@@ -13,7 +13,7 @@ wget https://github.com/archongum/ambari-server-presto/releases/download/0.1.1/a
 
 sudo mkdir /var/lib/ambari-server/resources/stacks/HDP/3.1/services/PRESTO/
 
-sudo tar -xvf ambari-server-presto-0.1.1.tar.gz /var/lib/ambari-server/resources/stacks/HDP/3.1/services/PRESTO/
+sudo tar -xvf ambari-server-presto-0.1.1.tar.gz -C /var/lib/ambari-server/resources/stacks/HDP/3.1/services/PRESTO/
 
 # please setup 'package/config.ini'
 
