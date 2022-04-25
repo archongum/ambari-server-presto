@@ -12,7 +12,7 @@ class Coordinator(Script):
         from common_func import init_dirs
 
         # 0: presto_tar_file; 1: presto_install_dir; 2: bin or lib or plugin; 3: strip-components
-        tar_pattern = 'tar -xzvf {0} -C {1} --strip-components={3} `tar -tf {0} | head -n 1`{2}'
+        tar_pattern = 'tar -xvf {0} -C {1} --strip-components={3} `tar -tf {0} | head -n 1`{2}'
         # cleanup
         exec_command('rm -rf {0}'.format(presto_install_dir))
         # init dirs
